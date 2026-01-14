@@ -1,0 +1,77 @@
+@import url('./components/_base.css');
+
+.main-wrapper{
+    margin-inline: 20px;
+    border-radius: 36px;
+    padding: var(--size-24);
+    background-color: var(--clr-white);
+    display: flex;
+    gap: var(--size-64);
+    
+    & .newsletter-form{
+        max-width: 400px;
+        padding-left: var(--size-40);
+        flex-grow: 1;
+    
+        & .form-content{
+        margin-bottom: var(--size-40);
+    
+        & .title{
+        font-size: 3.5rem;
+        font-weight: var(--fw-bold);
+        line-height: 1;
+        }
+            & .description{
+        margin-block: var(--size-24);
+            }
+            & .list{
+        list-style-type: none;
+        padding-left: 0;
+        
+            & .list-item{
+                margin-bottom: var(--size-10);
+            position: relative;
+            padding-left: 2.5rem;
+        
+            &::before{
+                content: url('./assets/images/icon-list.svg');
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+    }
+}
+        }
+        & .form{
+            & label[for='email']{
+            margin-bottom: 8px;
+            display: block;
+            font-size: .75rem;
+            font-weight: bold;
+            }
+            & input[type='email']{
+                width: 100%;
+                margin-bottom: var(--size-24);
+                border: 1px solid var(--clr-grey);
+                border-radius: 8px;
+                padding: 12px 24px;
+            }
+            & .form-btn{
+                cursor: pointer;
+                width: 100%;
+                display: block;
+                border: none;
+                border-radius: 8px;
+                padding-block: 18px;
+                background-color: var(--clr-blue-800);
+                font-weight: var(--fw-bold);
+                color: var(--clr-white);
+            
+                &:hover{
+                    background-color: var(--clr-blue-700);
+                    box-shadow: 0px 20px 30px rgba(0.5, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}
